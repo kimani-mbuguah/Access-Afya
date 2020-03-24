@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link as RouterLink, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
+
+import { Mutation } from 'react-apollo';
+import gql from 'graphql-tag';
+
 import validate from 'validate.js';
 import { makeStyles } from '@material-ui/styles';
 import {
@@ -14,6 +18,14 @@ import {
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 import { Facebook as FacebookIcon, Google as GoogleIcon } from 'icons';
+
+const SIGN_IN = gql`
+  mutation($email: String!, $password: String!) {
+    signIn(email: $email, password: $password) {
+      token
+    }
+  }
+`;
 
 const schema = {
   email: {
