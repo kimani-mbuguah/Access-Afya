@@ -1,8 +1,7 @@
 {
-  "name": "react-material-dashboard",
-  "author": "DeviasIO",
-  "email": "contact@devias.io",
-  "licence": "MIT",
+  "name": "acess_afya_dashboard",
+  "author": "kimani-mbuguah",
+  "email": "kimanimbuguah@gmail.com",
   "version": "0.3.0",
   "private": false,
   "scripts": {
