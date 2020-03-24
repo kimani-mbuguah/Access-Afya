@@ -1,0 +1,72 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js
+
+PATH: 
+  /home/kim/anaconda3/condabin:/home/kim/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.16.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/kim/.cache/yarn/v6/npm-express-4.17.1-4491fc38605cf51f8629d39c2b5d026f98a4c134-integrity/node_modules/express/.yarn-metadata.json: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at /usr/share/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:310:30)
+      at /usr/share/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "access-afya-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start": "nodemon --exec babel-node index.js",
+      "test:run-server": "TEST_DATABASE_URL=mongodb://localhost:27017/mytestdatabase npm start",
+      "test:execute-test": "TEST_DATABASE_URL=mongodb+srv://kim:127.0.0.1@cluster0-vjurh.mongodb.net/access_afya?retryWrites=true&w=majority mocha --require @babel/register './**/*.spec.js'",
+      "test": "echo \"No test specified\" && exit 0"
+    },
+    "keywords": [],
+    "author": "kim",
+    "license": "ISC",
+    "devDependencies": {
+      "@babel/core": "^7.8.4",
+      "@babel/node": "^7.8.4",
+      "@babel/preset-env": "^7.8.4",
+      "@babel/register": "^7.8.3",
+      "axios": "^0.19.2",
+      "chai": "^4.2.0",
+      "mocha": "^7.0.1",
+      "nodemon": "^2.0.2",
+      "morgan": "^1.9.1"
+    },
+    "dependencies": {
+      "apollo-server": "^2.10.1",
+      "apollo-server-express": "^2.10.1",
+      "bcrypt": "^4.0.0",
+      "cors": "^2.8.5",
+      "dataloader": "^2.0.0",
+      "dotenv": "^8.2.0",
+      "express": "^4.17.1",
+      "graphql": "^14.6.0",
+      "graphql-iso-date": "^3.6.1",
+      "graphql-resolvers": "^0.4.2",
+      "jsonwebtoken": "^8.5.1",
+      "mongoose": "^5.9.2",
+      "uuid": "^7.0.0",
+      "validator": "^12.2.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
